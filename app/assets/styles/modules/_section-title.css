@@ -4,9 +4,16 @@
     font-weight: 200;
     margin-bottom: 4rem;
     
-    &--small-b-margin-until-medium{
+    &--small-b-margin-until-medium {
         margin-bottom: 1rem;
         @mixin atMedium {
+            margin-bottom: 4rem;
+        }
+    }
+    
+    &--small-b-margin-until-large {
+        margin-bottom: 1rem;
+        @mixin atLarge {
             margin-bottom: 4rem;
         }
     }
