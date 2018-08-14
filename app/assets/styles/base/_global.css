@@ -6,9 +6,16 @@ body {
 
 ::-webkit-scrollbar { 
     display: block;
-    width: 5px;
-    background-color: $mainBlue;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #fff;
 }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $mainBlue; 
+}
+
 
 img {
     max-width: 100%;

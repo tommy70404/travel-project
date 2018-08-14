@@ -458,8 +458,14 @@ body {
 
 ::-webkit-scrollbar { 
     display: block;
-    width: 5px;
-    background-color: #2f5572;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #2f5572; 
 }
 
 img {
@@ -574,6 +580,19 @@ a {
 
 }
 
+.wrapper--no-padding-until-medium {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-medium {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
 .wrapper--medium {
         max-width: 976px;
     }
@@ -604,6 +623,18 @@ a {
 .page-section--blue {
         background-color: #2f5572;
         color: #fff;
+    }
+
+.page-section--testimonials {
+        background-color: #c5d4eb;
+    }
+
+@media (min-width: 800px) {
+
+.page-section--testimonials {
+            background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+            background-size: cover
+    }
     }
 
 .headline {
@@ -666,12 +697,20 @@ a {
         display: table;
     }
 
+.row--t-padding {
+        padding-top: 80px;
+    }
+
 .row--gutters {
         margin-right:-65px;
     }
 
 .row--gutters-larger {
         margin-right: -100px;
+    }
+
+.row--gutters-smaller {
+        margin-right: -45px;
     }
 
 .row--gutters > div {
@@ -682,12 +721,26 @@ a {
         padding-right: 100px;
     }
 
+.row--gutters-smaller > div {
+        padding-right: 45px;
+    }
+
 .row__b-margin-until-medium {
         margin-bottom: 1.5rem;
     }
 
 @media (min-width: 800px) {
         
+        .row--small-t-padding-until-medium {
+            padding-top: 80px;
+        }
+            @media (min-width: 800px) {
+        
+        .row--small-t-padding-until-medium {
+                padding-top: 0px
+        }
+    }
+
         .row__b-margin-until-medium {
             margin-bottom: 0;
         }
@@ -716,6 +769,24 @@ a {
         }
     }
 
+/*  Begin Equal Height Rules  */
+
+@media (min-width: 800px) {
+
+.row--equal-height-at-medium {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+    }
+
+.row--equal-height-at-medium > div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            float: none;
+        }
+
 .generic-content-container p {
         font-weight: 300;
         line-height: 1.65;
@@ -741,6 +812,17 @@ a {
 
 }
 
+.section-title--small-b-margin-until-medium{
+        margin-bottom: 1rem;
+    }
+
+@media (min-width: 800px) {
+
+.section-title--small-b-margin-until-medium{
+            margin-bottom: 4rem
+    }
+    }
+
 @media (min-width: 530px) {
 
 .section-title {
@@ -758,6 +840,7 @@ a {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: .5rem;
+
     }
 
 @media (min-width: 530px) {
@@ -766,10 +849,15 @@ a {
             margin-right: 1rem;
             margin-left: 0;
             margin-bottom: 0;
-            -webkit-transform: translateY(5%);
-                    transform: translateY(5%);
+            position: relative;
+            top: 8px;
             display: inline-block
+
     }
+    }
+
+.section-title--blue {
+        color: #2f5572;
     }
 
 .feature-item {
@@ -810,5 +898,56 @@ a {
 .feature-item__title {
             font-size: 1.875rem
     }
+    }
+
+.testimonials {
+    background-color: rgba(255,255,255,.7);
+    border-radius: 18px;
+    padding: 0 18px 1px 18px;
+    margin-bottom: 98px;
+    
+    @minxin atMedium {
+        margin-bottom: 0;
+        padding: 0 1.18125rem 1px 1.18125rem; 
+
+    }
+}
+
+.testimonials--last {
+        margin-bottom: 0px;
+    }
+
+@media (min-width: 800px) {
+
+.testimonials--last {
+            margin-bottom: 98px
+    }
+    }
+
+.testimonials__photo {
+        border-radius: 80px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto -80px auto;
+        width: 160px;
+        height: 160px;
+        top: -80px;
+        border: 6px solid rgba(255,255,255,.7);
+    }
+
+.testimonials__title {
+        color: #2f5572;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+    }
+
+.testimonials__subtitle {
+        color: #d59541;
+        text-align: center;
+        font-size: 0.9375;
+        font-weight: 400;
+        margin: .25rem 0 1rem 0;
     }
 
