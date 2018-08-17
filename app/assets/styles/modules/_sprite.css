@@ -3,10 +3,17 @@ Instead edit gulp/templates/sprite  */
 
     .icon {
         background-image: url('/assets/images/sprites/sprite-69f19c2e.svg');
+        display: inline-block;
+        transition: all .5s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
+    
+
     .icon--clear-view-escapes {
         width: 142.4px;
-        height: 59.53px;
+        height: 59.2px;
         background-position: 0 0;
     }
     .icon--comment {
