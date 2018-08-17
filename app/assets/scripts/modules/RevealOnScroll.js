@@ -28,7 +28,6 @@ export default class RevealOnScroll  {
                     $(value).toggleClass('reveal-item--is-visible');
                 },
                 offset: currentItem.offsetValue
-
             });
         });
     }

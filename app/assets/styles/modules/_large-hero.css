@@ -15,7 +15,7 @@
         transform: translateY(-50%);
         transition: all .4s ease-in-out;
         opacity: 1;
-        z-index: 10;
+        z-index: 5;
         
 
         &--clicked-on-menu {
@@ -42,7 +42,7 @@
 
 
         @mixin atSmall {
-            z-index: 10;
+            z-index: 9;
             font-size: 4.8rem;
             opacity: 1;
         }

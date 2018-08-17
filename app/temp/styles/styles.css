@@ -503,7 +503,7 @@ a {
         -webkit-transition: all .4s ease-in-out;
         transition: all .4s ease-in-out;
         opacity: 1;
-        z-index: 10;
+        z-index: 5;
     }
 
 .large-hero__text-content--clicked-on-menu {
@@ -540,7 +540,7 @@ a {
 @media (min-width: 530px) {
 
 .large-hero__title {
-            z-index: 10;
+            z-index: 9;
             font-size: 4.8rem;
             opacity: 1
     }
@@ -1182,7 +1182,7 @@ Instead edit gulp/templates/sprite  */
 .site-header {
     padding: 10px 0;
     position: absolute;
-    z-index: 5;
+    z-index: 6;
     width: 100%;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
@@ -1192,9 +1192,20 @@ Instead edit gulp/templates/sprite  */
 @media (min-width: 800px) {
 
 .site-header {
+        position: fixed;
         background-color: rgba(47,85,114, .4)
 
 }
+        
+        .site-header__dark {
+            background-color: rgba(31, 67, 117, 0.808);
+            padding: 1px 0;
+        }
+
+        .site-header__hide {
+            -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+        }
     }
 
 .site-header--is-extended {
@@ -1218,6 +1229,10 @@ Instead edit gulp/templates/sprite  */
                 transform-origin: 50% 0;
         background-color: #2f5572;
         padding: 25px 36px;
+        -webkit-transition: -webkit-transform .5s ease-in-out;
+        transition: -webkit-transform .5s ease-in-out;
+        transition: transform .5s ease-in-out;
+        transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
     }
 
 @media (min-width: 800px) {
@@ -1227,6 +1242,11 @@ Instead edit gulp/templates/sprite  */
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
+
+            .site-header__dark .site-header__logo {
+                -webkit-transform: scale(.39);
+                        transform: scale(.39);
+            }
     }
 
 .site-header__logo__graphic {
@@ -1318,7 +1338,7 @@ Instead edit gulp/templates/sprite  */
                     transform: scale(1);
             padding-top: 0;
             opacity: 1;
-            z-index: 1
+            z-index: 11
     }
     }
 
@@ -1332,6 +1352,7 @@ Instead edit gulp/templates/sprite  */
 .primary-nav {
     padding-top: 10px;
     overflow: hidden;
+    z-index: 10;
 }
 
 @media (min-width: 800px) {
