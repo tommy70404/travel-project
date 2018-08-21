@@ -10,7 +10,6 @@ export default class HideNav {
 
     createWaypoint() {
         let currentItem = this;
-        console.log(this.triggerPoint)
         this.triggerPoint.each((index,value) => {
             new Waypoint ({
                 element: value,

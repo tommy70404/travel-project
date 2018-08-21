@@ -1,0 +1,15 @@
+.touchbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    z-index: 10;
+    background-color: blueviolet;        
+    opacity: 0;
+    
+    &:hover {
+        opacity: 1;
+        background-color: brown;        
+    }
+}

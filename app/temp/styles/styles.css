@@ -642,6 +642,10 @@ a {
         max-width: 976px;
     }
 
+.wrapper--narrow {
+        max-width: 480px;
+    }
+
 @media (min-width: 530px) {
 
 .wrapper--b-margin {
@@ -977,7 +981,7 @@ Instead edit gulp/templates/sprite  */
     }
 
 .icon--facebook {
-        width: 21.23px;
+        width: 21px;
         height: 42.01px;
         background-position: 26.040607071652357% 45.795830448496034%;
     }
@@ -1082,6 +1086,8 @@ Instead edit gulp/templates/sprite  */
     font-weight: 200;
     margin-bottom: 4rem;
 
+        
+
 }
 
 .section-title--small-b-margin-until-medium {
@@ -1111,6 +1117,8 @@ Instead edit gulp/templates/sprite  */
 .section-title {
         font-size: 3.75rem
 
+        
+
 }
     }
 
@@ -1137,6 +1145,15 @@ Instead edit gulp/templates/sprite  */
             display: inline-block
 
     }
+
+            .section-title__icon--no-top-space {
+                top: 0;
+            }
+    }
+
+.section-title--less-margin {
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
 .section-title--blue {
@@ -1429,6 +1446,11 @@ Instead edit gulp/templates/sprite  */
             font-size: 1rem;
             background-color: transparent
     }
+
+            .primary-nav a.is-current-link {
+                color: #fabb69;
+
+            }
     }
 
 .reveal-item {
@@ -1444,4 +1466,106 @@ Instead edit gulp/templates/sprite  */
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
+
+.modal {
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .93);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.modal__close-container {
+        top: 15%;
+        right: 15%;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        border: 2px solid #2f5572;
+        border-radius: 50%;
+    }
+
+.modal__close-container:hover{
+            border: 2px solid #d59541;
+            background-color: #d59541;
+        }
+
+.modal__close {
+        text-align: center;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-size: 1.5rem;
+        color: #2f5572;
+        -webkit-transform: scaleX(1.3) translateX(2.5px);
+                transform: scaleX(1.3) translateX(2.5px);
+        -webkit-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+        cursor: pointer;
+
+    }
+
+.modal__close:hover {
+            color: #fff;
+        }
+
+.modal--is-visible {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+.modal__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+    }
+
+.modal__description {
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons__icon {
+        position: relative;
+        background-color: #d59541;  
+        width: 33%;
+        height: 76px;
+        z-index: 5;
+        margin: 0 5px 5px 0;
+        display: inline-block;
+        border: 4px solid #a5734c;
+    }
+
+@media (min-width: 800px) {
+
+.social-icons__icon {
+            width: 76px;
+            height: 76px;
+            margin: 0 16px
+    }
+    }
+
+.social-icons__icon .icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+                    transform: translateX(-50%) translateY(-50%);
+        }
 
