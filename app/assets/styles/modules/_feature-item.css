@@ -1,6 +1,13 @@
 .feature-item {
     position: relative;
     padding-bottom: 2rem;
+
+    span {
+        transition: .2s ease-in;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
     
     @mixin atSmall {
         padding-left: 94px;       
@@ -16,6 +23,8 @@
             left: 0;
         }
     }
+
+
 
     &__title {
         font-size: 1.5rem;

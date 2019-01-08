@@ -3,6 +3,7 @@ import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
 import HideNav from './modules/HideNav';
 import Modal from './modules/Modal';
+import LangSwitch from './modules/LangSwitch';
 
 
 
